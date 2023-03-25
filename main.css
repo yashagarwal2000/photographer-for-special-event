@@ -1,0 +1,1091 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+/* General Styles */
+ 
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+ 
+body {
+  background-color: #F2F2F2;
+  font-size: 1em;
+ /* color: #e2e3ed;*/
+}
+
+html, body {
+  margin:0;
+  padding:0;
+  overflow-x:hidden;	
+	/*prevents white space from the right side*/
+}
+
+ul, 
+ol {
+	
+  list-style-type: none;
+}
+
+a {
+ /* color: #e2e3ed;*/
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  color: white;
+ 
+}
+
+h2 {
+  color: black;
+  font-family: ;
+  font-weight: 500;
+  font-size: 1.875em;
+}
+ 
+h3, 
+h4 {
+  font-weight: 500;
+  font-size: 1.125em;
+  margin: 20px 0;
+	/*This is for the contact title for the footer*/
+}
+
+h4 {
+	font-family: ;
+	color: black;
+}
+
+img {
+ width: 100%;
+}
+ 
+figure {
+ margin: 0;
+}
+
+address {
+ font-style: normal;
+}
+
+button:hover{
+	background-color: red;
+}
+
+
+/* -------------------- Global Styles -------------------- */
+
+header,
+footer {
+  align-items: center;
+  background-color: black;	
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+
+footer {
+  flex-direction: column;	
+  text-align: center;
+}
+
+footer i {
+  color: white;
+  margin: 0;
+}
+
+footer p {
+  color: white;
+  margin: 0;
+}
+
+footer .content-wrapper {
+  margin: 50px 0;	
+  width: 55%;
+}
+
+footer .contact {
+  margin-bottom: 50px;
+}
+
+footer .contact h4 {
+  color: white;
+  font-size: 1.7rem;
+}
+
+footer address i {
+	color: white;
+}
+
+footer .social-icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer .social h4 {
+	color: white;
+	font-size: 1.7rem;
+}
+
+footer .social-icons p {
+ /* background-color: #527158;
+  border-radius: 50%;
+  align-items: center;
+  display: flex;
+  justify-content: center;	
+  width: 40px;
+  height: 40px;	*/
+					/*margin-right: 2em;*/
+}
+
+footer .social-icons p i {
+  font-size: 1.3125em;
+	
+}
+footer .copyright {
+  margin: 20px 0;
+}
+
+
+
+/* -------------------- Base Header - Footer Styles -------------------- */
+
+
+header {
+  padding: 15px 0; /*makes the height of the header longer*/
+}
+
+header .content-wrapper {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 0;	
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  font-size: 1.125em;
+  font-weight: 700;
+  justify-content: space-around;
+	/*margin: 0 27px;*/
+  text-transform: uppercase;
+  width: 100%; /*Made the links have space.*/	
+}
+
+header nav ul li {
+  color: white;
+  font-size: 1.125em;
+}
+
+li a {
+	color: white;		/*Puts color to navigation's words*/
+	margin-left: 1.2rem;
+	margin-right: 1rem;
+}
+
+nav {							
+	position: fixed;
+	z-index: 100; /* had to use this so that the links were in front as the user scrolls down*/
+}
+
+nav li{
+		display: none;
+	/* put nav link that is for desktop as none so that the regular nav wont show in mobile. Hamburger should only appear*/	
+}
+
+a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  
+  display: inline-block;
+
+  position: relative;
+}
+
+li a:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: red;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+a:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+
+/**End of codepen.io**/
+
+
+
+header {
+	background-image: url("file:///C|/Users/Guest1/Desktop/photographer_website/img/shot_1.png");
+	background-position: center;
+	background-size: cover;
+	height: 51rem;
+	width: 100%;
+}
+
+.intro {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 34rem;
+	
+}
+
+#name h1 {
+	font-family: 'Monoton', cursive;
+	font-size: 1.5em;
+	letter-spacing: 1.0rem;
+	line-height: 1rem;
+	padding-left: 1rem;
+	word-spacing: 0.3rem;
+}
+
+#job_title h2 {
+	color: white;
+	font-family: 'Bebas Neue', cursive;
+	font-size: 1.1rem;
+	align-content: center;
+	margin-left: 4rem;
+	word-spacing: 1.0rem;
+}
+
+
+.noselect {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+		-webkit-tap-highlight-color: transparent;
+}
+
+button {
+	display: flex;
+	align-items: center;
+	background: none;
+	border: 2px solid darkslateblue;		/*#89db84*/
+	border-radius: 50px;
+	cursor: pointer;
+	height: 50px;
+	justify-content: center;
+	margin-left: 3.0rem;
+	margin-top: -38rem;
+	transition: 500ms;
+	width: 150px;
+}
+
+span, svg {
+	position: absolute;
+	color: darkslateblue;					/*#89db84*/
+	fill: transparent;
+}
+
+.noselect span {
+	font-size: 1.5rem;
+	text-transform: capitalize;
+}
+
+button:hover {
+	font-size: 14px;
+}
+
+button:focus {
+	outline: none;
+	border: 2px solid transparent;
+	width: 50px;
+	border-left: 2px solid #89db84;
+	border-bottom: 2px solid #89db84;
+	animation: spin 2s 500ms forwards;
+}
+
+button:focus span {
+	color: transparent;
+}
+
+button:focus svg {
+	animation: check 500ms 2300ms forwards;
+}
+
+@keyframes spin {
+	80%{border: 2px solid transparent;
+			border-left: 2px solid #89db84;}
+	100%{transform: rotate(1080deg);
+		border: 2px solid #89db84;}
+}
+
+@keyframes check {
+	to{fill: #89db84}
+}
+
+@keyframes circle {
+	to{border: 2px solid #89db84;}
+}
+
+/*
+nav a i {
+	color: lawngreen;
+	font-size: 1.2em;
+	padding-bottom: -3rem;
+	padding-left: 2rem;
+	padding-right: 1rem;
+}*/
+
+
+/*** End of the cover home page ***/
+
+
+.description {
+	margin-left: 2rem;
+	margin-right: 2rem;
+	margin-top: -5rem;
+	text-align: justify;
+}
+
+
+.about {
+	display: flex;
+	flex-flow: row wrap;	
+}
+
+.about_wrapper {
+	margin-top: 5rem;
+}
+
+.about_wrapper img {
+	height: 36rem;
+	justify-content: center;
+	padding-bottom: 3rem;
+	margin-left: 5rem;
+	padding-top: 2rem;
+	width: 20rem;
+}
+
+.description h2 {
+	color: black;
+	font-family: 'Bebas Neue', cursive;
+	font-size: 2.4rem;
+	/*font-family: 'Raleway', sans-serif;*/
+	margin-left: 0rem;
+	padding-bottom: 1rem;
+	padding-top: 6rem;
+	text-align: center;
+	text-decoration: underline;
+}
+
+.description p {
+ 	margin-right: 3rem;
+}
+
+.img-styling {
+height: 80vh;		/*Allowd for all pictures to be the same height.*/
+}
+
+/*** End of About section ***/
+
+.row h2 {
+	color: black;
+	font-family: 'Bebas Neue', cursive;
+	font-size: 2.4rem;
+	/*font-family: 'Raleway', sans-serif;*/
+	margin-left: 0rem;
+	padding-bottom: 1rem;
+	padding-top: 6rem;
+	text-align: center;
+	text-decoration: underline;
+}
+
+ .col-sm-4 center p {
+	font-family: 'Rajdhani', sans-serif; /**FONT ISNT APPEARING**/
+}
+
+/*-------END OF Portfolio------*/
+
+
+.parallax {
+	background: url("file:///C|/Users/Guest1/Desktop/photographer_website/css/img/8.png") no-repeat;
+	/*background: url('img/earrings.png') no-repeat; /*temporary picture*/
+	background-attachment: fixed;
+	background-size: cover;
+	height: 230px;
+}
+
+.motto_1 p {
+	font-size: 0.89em;
+	font-family: 'Syncopate', sans-serif;
+	color: white;
+	/*this will be in white color*/
+	margin-top: 54px;
+	text-align: center;
+}
+
+.motto_1 h4 {
+	font-size: 0.74em;
+	font-family: 'Syncopate', sans-serif;
+	color: white;
+	text-align: right;
+	padding-right: 45px;
+}
+
+.motto_1 .overlay {
+	background-color: rgba(0, 0, 0, 0.8);
+	background-size: 100px;
+	position: absolute;
+	height: 230px;
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Slider */
+.slick-slide {
+  margin: 0px 20px;
+}
+
+.logo-carousel {
+  overflow: inherit;
+  border-top: 1px solid #353535;
+  border-bottom: 1px solid #353535;
+}
+
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-track::before,
+.slick-track::after {
+  display: table;
+  content: '';
+}
+
+.slick-track::after {
+  clear: both;
+}
+
+.slick-track {
+  padding: 1rem 0;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  background: url(https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/arrow.svg?sanitize=true) center no-repeat;
+  color: #fff;
+  filter: invert(77%) sepia(32%) saturate(1%) hue-rotate(344deg) brightness(105%) contrast(103%);
+  border: none;
+  width: 2rem;
+  height: 1.5rem;
+  text-indent: -10000px;
+  margin-top: -16px;
+  z-index: 99;
+}
+
+.slick-arrow.slick-next {
+  right: -40px;
+  transform: rotate(180deg);
+}
+
+.slick-arrow.slick-prev {
+  left: -40px;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  .slick-arrow {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+body {
+    background-color: #010101;
+  }
+  
+.row {
+  overflow: hidden;
+}  
+
+/* JsFiddle Example only/don't use */
+.logo-carousel {
+  margin-top: 32px;
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+  Price Mobile Page
+   ========================================================================== */
+.banner {
+	background-image: url("file:///C|/Users/Guest1/Desktop/photographer_website/img/shot_1.png");
+	background-position: center;
+	background-size: cover;
+	height: 16rem;
+	width: 100%;
+}
+
+/**codepen.io**/
+#menu-bar {
+	margin-top: -5rem;
+}
+
+
+
+header nav {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  font-size: 1.125em;
+  font-weight: 700;
+  justify-content: space-around;
+	/*margin: 0 27px;*/
+	margin-top: 10rem;
+  text-transform: uppercase;
+  width: 100%; /*Made the links have space.*/	
+}
+
+header nav ul li {
+  color: white;
+  font-size: 1.125em;
+}
+
+li a {
+	color: white;		/*Puts color to navigation's words*/
+	margin-left: 1.2rem;
+	margin-right: 1rem;
+}
+
+nav {							
+	position: fixed;
+	z-index: 100; /* had to use this so that the links were in front as the user scrolls down*/
+}
+
+nav li{
+		display: none;
+	/* put nav link that is for desktop as none so that the regular nav wont show in mobile. Hamburger should only appear*/	
+}
+
+a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  
+  display: inline-block;
+
+  position: relative;
+}
+
+li a:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: red;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+a:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+
+a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: -23rem;
+  position: relative;
+}
+
+li a:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: red;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+a:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+
+#name h1 {
+	margin-bottom: -14rem;
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+
+#job_title h2 {
+	color: white;
+	font-family: 'Bebas Neue', cursive;
+	font-size: 1.1rem;
+	align-content: center;
+	margin-left: 4rem;
+	margin-top: 15rem;
+	word-spacing: 1.0rem;
+}
+
+
+/***End of banner***/
+
+
+.display-4 {
+	color: black;
+	margin-left: -1rem;
+}
+
+.lead {
+	margin-right: 2rem;
+}
+
+.btn-block, .btn-lg, .btn-outline-primary {
+	margin-left: -1rem;
+	margin-bottom: 2rem;
+	margin-top: 1.2rem;
+}
+
+/* ==========================================================================
+  Contact Mobile Page
+   ========================================================================== */
+.contact-form {
+	display: flex;
+	flex-wrap: wrap;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 12rem;
+}
+
+.contact-form h2 {
+	font-family: 'Bebas Neue', cursive;
+	margin-left: 12rem;
+	margin-top: -5rem;
+	text-decoration: underline;
+}
+
+.textb {
+	width: calc(70% -10px);
+	height: 50px;
+	padding: 12px;
+	padding-left: 12rem;
+	background-color: black;
+	border: none;
+	color: white;
+	margin-bottom: 20px;
+	margin-left: 3rem;
+}
+
+textarea {
+	width: 80%;
+	max-height: 430px;
+	min-height: 200px;
+	resize: vertical;
+	padding: 12px;
+	background-color: black;
+	border: none;
+	color: white;
+	margin-bottom: 20px;
+	margin-left: 3rem;
+}
+
+.send btn_c {
+	width: 120px;
+	height: 40px;
+	margin-left: -8rem;
+	margin-bottom: 13rem;
+	background-color: red;
+	color: white;
+	text-tranform: uppercase;
+	cursor: pointer;
+	border: 2px solid black;
+	transition .5s linear;
+}
+
+
+
+.map {
+	margin-left: 3rem;
+	margin-top: -2rem;
+	margin-bottom: 5rem;
+}
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+	
+	
+	
+	
+.intro {
+	display: flex;
+	justify-content: center;
+	margin-bottom: -24rem;
+	
+}
+
+#name h1 {
+	font-family: 'Monoton', cursive;
+	font-size: 3em;
+	letter-spacing: 2rem;
+	line-height: 1rem;
+	word-spacing: 1.2rem;
+}
+
+#job_title h2 {
+	color: white;
+	font-family: 'Bebas Neue', cursive;
+	align-content: center;
+	margin-left: 10rem;
+	word-spacing: 1.0rem;
+}
+
+/*** End of the cover home page ***/
+
+.about {
+	margin-top: 20rem;
+}
+
+
+.about {
+	display: flex;
+	flex-flow: row wrap;	
+}
+
+.about_wrapper {
+	margin-top: 1rem;
+}
+
+.about_wrapper img {
+	height: 30rem;
+	justify-content: center;
+	padding-bottom: 2rem;
+	padding-left: 8rem;
+	padding-top: 2rem;
+	width: 23rem;
+}
+
+.about_wrapper h2 {
+	color: black;
+	font-family: 'Raleway', sans-serif;
+	font-style:italic;
+	margin-left: 1rem;
+	padding-bottom: 1rem;
+	padding-top: 6rem;
+	text-align: center;
+}
+
+.description {
+	margin-top: -1rem;
+}
+
+
+
+	
+	
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
